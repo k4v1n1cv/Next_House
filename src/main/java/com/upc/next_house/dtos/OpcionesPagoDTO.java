@@ -11,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class OpcionesPadoDTO {
+public class OpcionesPagoDTO {
     private Integer id;
     private String metodoPago;
     private String descripcion;
