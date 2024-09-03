@@ -15,7 +15,8 @@ import java.util.Set;
 public class Reservaalquiler {
     @Id
     @Column(name = "id_reserva", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "fecha_inicio", nullable = false)
     private LocalDate fechaInicio;

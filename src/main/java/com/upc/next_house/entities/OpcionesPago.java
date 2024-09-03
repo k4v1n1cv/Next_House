@@ -14,7 +14,8 @@ import java.util.Set;
 public class OpcionesPago {
     @Id
     @Column(name = "id_oppago", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "metodo_pago", nullable = false, length = 50)
     private String metodoPago;

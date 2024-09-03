@@ -13,7 +13,8 @@ import java.time.LocalDate;
 public class Comentario {
     @Id
     @Column(name = "id_comentario", nullable = false, length = 50)
-    private String idComentario;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idComentario;
 
     @Column(name = "calificacion", nullable = false, length = 50)
     private String calificacion;

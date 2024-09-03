@@ -15,7 +15,8 @@ import java.util.Set;
 public class Propiedad {
     @Id
     @Column(name = "id_propiedad", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "titulo", nullable = false, length = 50)
     private String titulo;

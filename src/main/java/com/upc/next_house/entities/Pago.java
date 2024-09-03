@@ -13,7 +13,8 @@ import java.time.LocalDate;
 public class Pago {
     @Id
     @Column(name = "id_pago", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "fecha_transaccion", nullable = false)
     private LocalDate fechaTransaccion;

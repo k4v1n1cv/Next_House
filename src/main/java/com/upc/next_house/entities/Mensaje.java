@@ -13,7 +13,8 @@ import java.time.LocalDate;
 public class Mensaje {
     @Id
     @Column(name = "id_mensaje", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "contenido", nullable = false, length = 50)
     private String contenido;

@@ -14,7 +14,8 @@ import java.util.Set;
 public class Ubicacion {
     @Id
     @Column(name = "id_ubicacion", nullable = false)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "ciudad", nullable = false, length = 50)
     private String ciudad;
