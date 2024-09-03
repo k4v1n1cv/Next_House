@@ -43,5 +43,5 @@ public class UsuarioController {
         Usuario usuario= usuarioService.buscarPorId(id);
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
-
+    //leonardo cabro
 }
