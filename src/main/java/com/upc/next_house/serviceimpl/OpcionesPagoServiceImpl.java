@@ -20,7 +20,7 @@ public class OpcionesPagoServiceImpl implements OpcionesPagoService {
 
     @Override
     public OpcionesPago modificarOpcionesPago(OpcionesPago opcionesPago) {
-        if(oPR.existsById((opcionesPago.getId()))){
+        if(oPR.existsById(Math.toIntExact((opcionesPago.getId())))){
             return oPR.save(opcionesPago);
         }
         return null;

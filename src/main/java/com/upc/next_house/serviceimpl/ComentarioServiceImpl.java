@@ -20,7 +20,7 @@ public class ComentarioServiceImpl implements ComentarioService {
 
     @Override
     public Comentario modificarComentario(Comentario comentario) {
-        if(cR.existsById(comentario.getIdComentario())){
+        if(cR.existsById(String.valueOf(comentario.getIdComentario()))){
             return cR.save(comentario);
         }
         return null;

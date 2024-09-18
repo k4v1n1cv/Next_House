@@ -37,7 +37,7 @@ public class OpcionesPagoController {
     public void eliminarOpcionesPago(@RequestBody OpcionesPagoDTO opcionesPagoDTO){
         ModelMapper modelMapper = new ModelMapper();
         OpcionesPago opcionesPago = modelMapper.map(opcionesPagoDTO, OpcionesPago.class);
-        oPS.eliminarOpcionesPago(opcionesPago.getId());
+        oPS.eliminarOpcionesPago(Math.toIntExact(opcionesPago.getId()));
     }
 
     @GetMapping("/opcionesPago")

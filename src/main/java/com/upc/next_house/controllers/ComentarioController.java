@@ -37,7 +37,7 @@ public class ComentarioController {
     public void eliminarComentario(@RequestBody ComentarioDTO comentarioDTO) {
         ModelMapper modelMapper = new ModelMapper();
         Comentario comentario = modelMapper.map(comentarioDTO, Comentario.class);
-        cS.eliminarComentario(comentario.getIdComentario());
+        cS.eliminarComentario(String.valueOf(comentario.getIdComentario()));
     }
 
     @GetMapping("/comentarios")
